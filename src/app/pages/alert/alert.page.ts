@@ -8,7 +8,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class AlertPage implements OnInit {
 
-  titulo: string;
+  public titulo: string = 'Alert page';
 
   constructor( public alertCtrl: AlertController ) { }
 
@@ -50,9 +50,9 @@ export class AlertPage implements OnInit {
 
   async presentAlert() {
     const alert = await this.alertCtrl.create({
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
+      header: 'Confirmacion',
+      subHeader: 'Esta seguro de realizar esta acción?',
+      message: 'No podrá deshacer esta acción',
       buttons: [
         {
           text: 'Cancel',
