@@ -22,12 +22,16 @@ export class InicioPage implements OnInit {
       icon: 'beaker',
       name: 'Avatar',
       redirectTo: '/avatar'
-    }
-    ,
+    },
     {
       icon: 'radio-button-on',
       name: 'Botones y router',
       redirectTo: '/botones'
+    },
+    {
+      icon: 'card',
+      name: 'Cards',
+      redirectTo: '/card'
     }
   ];
 
