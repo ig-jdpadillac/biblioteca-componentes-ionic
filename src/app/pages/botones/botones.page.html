@@ -1,0 +1,82 @@
+<ion-header no-border>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>botones</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="primary">
+        <ion-icon slot="start" name="heart"></ion-icon>
+        Click me
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- botones normales -->
+
+  <ion-button size="small" expand="full" >
+    Small
+  </ion-button>
+
+  <ion-button size="default" expand="full" >
+    Default
+  </ion-button>
+
+  <ion-button size="large" expand="full">
+    Large
+  </ion-button>
+
+
+  <ion-button expand="full" routerLink='/alert' color="secondary" style="margin-top: 20px;">
+    Anchor
+  </ion-button>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="full" color="tertiary" >
+          Left
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="full" color="success">
+          Right
+        </ion-button >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- fill -->
+
+  i=<ion-grid fixed>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button style="margin-top: 20px;" fill="clear" expand="full">
+          Clear
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button style="margin-top: 20px;" fill="outline">
+          Clear
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button style="margin-top: 20px;" fill="solid" expand="full">
+          Clear
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
+</ion-content>
