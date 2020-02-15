@@ -1,5 +1,15 @@
 <ion-header no-border>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+
+
+      <!-- Otra forma de hacer aparecer el menu, incluso mas menus con el id especifico -->
+        <!-- <ion-menu-button color="primary" menu="main"></ion-menu-button> -->
+
+    </ion-buttons>
     <ion-title>Componentes</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +19,7 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let c of componentes"
+    <ion-item *ngFor="let c of componentes | async"
               [routerLink]="c.redirectTo" detail>
         <ion-icon slot="start" [name]="c.icon"></ion-icon>
         <ion-label>{{ c.name }}</ion-label>

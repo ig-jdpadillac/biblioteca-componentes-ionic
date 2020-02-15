@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Componente } from 'src/app/models/Componentet';
+import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-inicio',
@@ -7,84 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  componentes: Componente[] = [
-    {
-      icon: 'american-football',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'appstore',
-      name: 'Alert',
-      redirectTo: '/alert'
-    },
-    {
-      icon: 'beaker',
-      name: 'Avatar',
-      redirectTo: '/avatar'
-    },
-    {
-      icon: 'radio-button-on',
-      name: 'Botones y router',
-      redirectTo: '/botones'
-    },
-    {
-      icon: 'card',
-      name: 'Cards',
-      redirectTo: '/card'
-    },
-    {
-      icon: 'checkmark-circle-outline',
-      name: 'CheckBox',
-      redirectTo: '/check'
-    },
-    {
-      icon: 'calendar',
-      name: 'Date time',
-      redirectTo: '/date-time'
-    },
-    {
-      icon: 'car',
-      name: 'Fab bottons',
-      redirectTo: '/fab'
-    },
-    {
-      icon: 'grid',
-      name: 'Grid- rows',
-      redirectTo: '/grid'
-    },
-    {
-      icon: 'infinite',
-      name: 'Infinite Scroll',
-      redirectTo: '/infinite-scroll'
-    },
-    {
-      icon: 'hammer',
-      name: 'Input - forms',
-      redirectTo: '/input'
-    },
-    {
-      icon: 'list',
-      name: 'Listas - Sliding',
-      redirectTo: '/lista'
-    },
-    {
-      icon: 'refresh-circle',
-      name: 'Loading',
-      redirectTo: '/loading'
-    }
-  ];
+  componentes: Observable<Componente[]>;
 
-
-  constructor() { }
+  constructor(
+    private menuCtrl: MenuController,
+    private dataSrv: DataService
+  ) { }
 
   ngOnInit() {
+    this.componentes = this.dataSrv.getMenuOpts();
+
+  }
+
+  toggleMenu() {
+    this.menuCtrl.toggle();
   }
 
 }
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
-}
