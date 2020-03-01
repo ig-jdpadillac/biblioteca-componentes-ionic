@@ -1,0 +1,17 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>SearchBar</ion-title>
+  </ion-toolbar>
+
+  <ion-searchbar animated placeholder="Buscar" 
+                 [debounce]="450"
+                 (ionChange)="onSearchChange($event)">
+  </ion-searchbar>
+
+</ion-header>
+
+<ion-content>
+</ion-content>
