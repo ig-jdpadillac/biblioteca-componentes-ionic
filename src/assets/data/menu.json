@@ -93,6 +93,16 @@
       "icon": "search",
       "name": "Search bar",
       "redirectTo": "/search-bar"
+    },
+    {
+      "icon": "copy",
+      "name": "Segment",
+      "redirectTo": "/segment"
+    },
+    {
+      "icon": "albums",
+      "name": "Slides",
+      "redirectTo": "/slides"
     }
   ]
   
